@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Mapa from '../components/Mapa.jsx'
+---
+
+<Layout title="Inicio - Cristian Avendaño">
+	<Mapa client:load />
+</Layout>
+
+<style is:global> 
+	.mapboxgl-popup {
+        max-width: none !important;
+    }
+
+	.mapboxgl-popup .mapboxgl-popup-content {
+		background-color: #113444;
+		width: 100%;
+		border-radius: .5rem;
+		max-width: 800px;
+		color: #fff;
+		font-size: 16px;
+		padding: 1rem;
+	}
+
+	.mapboxgl-popup-content .mapboxgl-popup-close-button {
+		padding: .5rem;
+		font-size: 2rem;
+		background-color: #081b24;
+	}
+</style>

@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CardProyectLey from "../components/CardProyectLey.jsx"
+
+const response = await fetch(
+  "https://cristian-avendano-app.onrender.com/api/proyectos-leys?fields[0]=title&fields[1]=description&fields[2]=status&fields[3]=statusDescription&fields[4]=link_ley&fields[5]=ley&populate[image][fields][0]=url"
+);
+const result = await response.json();
+---
+
+<Layout title="Proyectos de ley - Cristian Avendaño">
+  <section class="text-white my-10">
+    <div class="flex flex-col text-center w-full mb-10">
+      <h1
+        class="text-2xl md:text-4xl font-medium mb-6 title-font animate-fade-up"
+      >
+        Proyectos de Ley y Actos Legislativos como Autor
+      </h1>
+      <p
+        class="lg:w-2/3 text-lg font-public font-medium mx-auto animate-fade-right animate-delay-700"
+      >
+        Para que se conviertan en Ley, deben ser aprobados en 4 debates y en el
+        caso de los Actos Legislativos, que reforman, crean o derogan normas
+        constitucionales, se requieren 8 debates.
+      </p>
+    </div>
+
+    <div class="py-10 mx-auto">
+      <div class="flex flex-wrap gap-6">
+        <CardProyectLey ley={result.data} client:load/>
+      </div>
+    </div>
+  </section>
+</Layout>

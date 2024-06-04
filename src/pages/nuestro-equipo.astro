@@ -1,0 +1,665 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SliderNuestroEquipo from "../components/slider/SliderNuestroEquipo.jsx";
+import { Image } from "astro:assets";
+import franciscoRey from "../images/franciscoRey.webp";
+import jesicaSanchez from "../images/jesicaSanchez.webp";
+import joseGutierrez from "../images/joseGutierrez.webp";
+import julianaMedina from "../images/julianaMedina.webp";
+import duberAlvarado from "../images/duberAlvarado.webp";
+import danielaAvila from "../images/danielaAvila.webp";
+import hernanMorantes from "../images/hernanMorantes.webp";
+---
+
+<Layout title="Mi equipo - Cristian Avendaño">
+  <section class="text-white my-10">
+    <div>
+      <div class="flex flex-col text-center w-full mb-10">
+        <h1 class="text-2xl md:text-4xl font-medium title-font animate-fade-up">
+          Equipo Unidad de Trabajo Legislativo (UTL)
+        </h1>
+        <SliderNuestroEquipo client:load />
+        <p
+          class="lg:w-2/3 text-base font-public font-medium mx-auto animate-fade-right animate-delay-700"
+        >
+          Presento al equipo de profesionales con los que colaboro. Su notable
+          trayectoria y experiencia enriquecen nuestro compromiso territorial.
+          Los animo a explorar sus perfiles y contactarlos en cualquier momento
+          para obtener más información sobre este destacado equipo
+          #ContraLosClanes.
+        </p>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="p-4 lg:w-1/2 animate-fade-up animate-delay-700">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+          >
+            <a
+              href="#"
+              class="relative group rounded-lg overflow-hidden flex-shrink-0 w-48 h-48 transition duration-500 hover:scale-105 shadow-2xl shadow-[#D3D62F]/15"
+            >
+              <div
+                class="opacity-0 group-hover:opacity-100 duration-500 absolute inset-0 flex justify-center items-center text-xl bg-[#113444]/70 text-[#D3D62F]"
+              >
+                Perfil
+              </div>
+              <Image
+                src={franciscoRey}
+                alt="Francisco Rey"
+                class="w-full h-full object-cover sm:mb-0 mb-4"
+              />
+            </a>
+            <div class="flex-grow sm:pl-8 my-4">
+              <h2 class="title-font font-medium text-2xl text-[#D3D62F]">
+                Francisco Rey
+              </h2>
+              <h3 class="mb-3">Coordinador UTL</h3>
+              <p class="mb-4 font-public line-clamp-3 px-6 sm:px-0">
+                Soy Francisco Rey, aunque muchos me conocen como “Piti”. Soy un
+                joven bumangués apasionado por los asuntos públicos que desde
+                muy pequeño he participado en diferentes procesos de liderazgo.
+              </p>
+              <span class="flex gap-3 justify-center sm:justify-start">
+                <a
+                  href="#"
+                  title="facebook"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                    ></path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/2 animate-fade-up animate-delay-700">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+          >
+            <a
+              href="#"
+              class="relative group rounded-lg overflow-hidden flex-shrink-0 w-48 h-48 transition duration-500 hover:scale-105 shadow-2xl shadow-[#D3D62F]/15"
+            >
+              <div
+                class="opacity-0 group-hover:opacity-100 duration-500 absolute inset-0 flex justify-center items-center text-xl bg-[#113444]/70 text-[#D3D62F]"
+              >
+                Perfil
+              </div>
+              <Image
+                src={jesicaSanchez}
+                alt="Jesica Sanchez"
+                class="w-full h-full object-cover sm:mb-0 mb-4"
+              />
+            </a>
+            <div class="flex-grow sm:pl-8 my-4">
+              <h2 class="title-font font-medium text-2xl text-[#D3D62F]">
+                Jesica Sánchez
+              </h2>
+              <h3 class="mb-3">Jefe de Prensa</h3>
+              <p class="mb-4 font-public line-clamp-3 px-6 sm:px-0">
+                Comunicadora Social y Periodista de la Universidad de La Sabana,
+                con énfasis en Comunicación Política y Periodismo Internacional,
+                tengo experiencia y conocimientos para formular y ejecutar
+                estrategias de comunicación en el sector público y privado.
+              </p>
+              <span class="flex gap-3 justify-center sm:justify-start">
+                <a
+                  href="#"
+                  title="facebook"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                    ></path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/2 animate-fade-up">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+          >
+            <a
+              href="#"
+              class="relative group rounded-lg overflow-hidden flex-shrink-0 w-48 h-48 transition duration-500 hover:scale-105 shadow-2xl shadow-[#D3D62F]/15"
+            >
+              <div
+                class="opacity-0 group-hover:opacity-100 duration-500 absolute inset-0 flex justify-center items-center text-xl bg-[#113444]/70 text-[#D3D62F]"
+              >
+                Perfil
+              </div>
+              <Image
+                src={joseGutierrez}
+                alt="Jose Gutierrez"
+                class="w-full h-full object-cover sm:mb-0 mb-4"
+              />
+            </a>
+            <div class="flex-grow sm:pl-8 my-4">
+              <h2 class="title-font font-medium text-2xl text-[#D3D62F]">
+                Jose Gutiérrez
+              </h2>
+              <h3 class="mb-3">Coordinador Juridico</h3>
+              <p class="mb-4 font-public line-clamp-3 px-6 sm:px-0">
+                Abogado santandereano de la Universidad Santo Tomas de
+                Bucaramanga. Tiene una especialización en Derecho Administrativo
+                de la Universidad Externado de Colombia.
+              </p>
+              <span class="flex gap-3 justify-center sm:justify-start">
+                <a
+                  href="#"
+                  title="facebook"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                    ></path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/2 animate-fade-up">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+          >
+            <a
+              href="#"
+              class="relative group rounded-lg overflow-hidden flex-shrink-0 w-48 h-48 transition duration-500 hover:scale-105 shadow-2xl shadow-[#D3D62F]/15"
+            >
+              <div
+                class="opacity-0 group-hover:opacity-100 duration-500 absolute inset-0 flex justify-center items-center text-xl bg-[#113444]/70 text-[#D3D62F]"
+              >
+                Perfil
+              </div>
+              <Image
+                src={julianaMedina}
+                alt="Juliana Medina"
+                class="w-full h-full object-cover sm:mb-0 mb-4"
+              />
+            </a>
+            <div class="flex-grow sm:pl-8 my-4">
+              <h2 class="title-font font-medium text-2xl text-[#D3D62F]">
+                Juliana Medina
+              </h2>
+              <h3 class="mb-3">Abogada</h3>
+              <p class="mb-4 font-public line-clamp-3 px-6 sm:px-0">
+                Abogada egresada de la Universidad Industrial de Santander,
+                especialista en Contratación Estatal de la Universidad Autónoma
+                de Bucaramanga.
+              </p>
+              <span class="flex gap-3 justify-center sm:justify-start">
+                <a
+                  href="#"
+                  title="facebook"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                    ></path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/2 animate-fade-up">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+          >
+            <a
+              href="#"
+              class="relative group rounded-lg overflow-hidden flex-shrink-0 w-48 h-48 transition duration-500 hover:scale-105 shadow-2xl shadow-[#D3D62F]/15"
+            >
+              <div
+                class="opacity-0 group-hover:opacity-100 duration-500 absolute inset-0 flex justify-center items-center text-xl bg-[#113444]/70 text-[#D3D62F]"
+              >
+                Perfil
+              </div>
+              <Image
+                src={duberAlvarado}
+                alt="Duber Alvarado"
+                class="w-full h-full object-cover sm:mb-0 mb-4"
+              />
+            </a>
+            <div class="flex-grow sm:pl-8 my-4">
+              <h2 class="title-font font-medium text-2xl text-[#D3D62F]">
+                Duber Alvarado
+              </h2>
+              <h3 class="mb-3">Realizador AudioVisual</h3>
+              <p class="mb-4 font-public line-clamp-3 px-6 sm:px-0">
+                Soy Tecnólogo en administración del ensamble y mantenimiento de
+                computadores y redes Especialista en seguridad de redes de
+                Computadores, apasionado en el campo audiovisual con más de 5
+                años de experiencia en Redes Sociales.
+              </p>
+              <span class="flex gap-3 justify-center sm:justify-start">
+                <a
+                  href="#"
+                  title="facebook"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                    ></path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/2 animate-fade-up">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+          >
+            <a
+              href="#"
+              class="relative group rounded-lg overflow-hidden flex-shrink-0 w-48 h-48 transition duration-500 hover:scale-105 shadow-2xl shadow-[#D3D62F]/15"
+            >
+              <div
+                class="opacity-0 group-hover:opacity-100 duration-500 absolute inset-0 flex justify-center items-center text-xl bg-[#113444]/70 text-[#D3D62F]"
+              >
+                Perfil
+              </div>
+              <Image
+                src={danielaAvila}
+                alt="Daniela Avila"
+                class="w-full h-full object-cover sm:mb-0 mb-4"
+              />
+            </a>
+            <div class="flex-grow sm:pl-8 my-4">
+              <h2 class="title-font font-medium text-2xl text-[#D3D62F]">
+                Daniela Avila
+              </h2>
+              <h3 class="mb-3">Realizadora AudioVisual</h3>
+              <p class="mb-4 font-public line-clamp-3 px-6 sm:px-0">
+                Profesional en Medios Audiovisuales del Politécnico
+                Grancolombiano y Magistra Cum Laude en Creación Audiovisual de
+                la Pontificia Universidad Javeriana con experiencia en el área
+                de realización y edición en cine, publicidad y digital.
+              </p>
+              <span class="flex gap-3 justify-center sm:justify-start">
+                <a
+                  href="#"
+                  title="facebook"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                    ></path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/2 animate-fade-up">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+          >
+            <a
+              href="#"
+              class="relative group rounded-lg overflow-hidden flex-shrink-0 w-48 h-48 transition duration-500 hover:scale-105 shadow-2xl shadow-[#D3D62F]/15"
+            >
+              <div
+                class="opacity-0 group-hover:opacity-100 duration-500 absolute inset-0 flex justify-center items-center text-xl bg-[#113444]/70 text-[#D3D62F]"
+              >
+                Perfil
+              </div>
+              <Image
+                src={hernanMorantes}
+                alt="Hernán Morantes"
+                class="w-full h-full object-cover sm:mb-0 mb-4"
+              />
+            </a>
+            <div class="flex-grow sm:pl-8 my-4">
+              <h2 class="title-font font-medium text-2xl text-[#D3D62F]">
+                Hernán Morantes
+              </h2>
+              <h3 class="mb-3">Abogado</h3>
+              <p class="mb-4 font-public line-clamp-3 px-6 sm:px-0">
+                Abogado de la Universidad Cooperativa de Colombia destacado en
+                litigio estratégico en materia ambiental, especialista en
+                Derecho Administrativo de la Universidad Nacional e investigador
+                en temas de derecho ambiental, minero energéticos y
+                anticorrupción con experiencia en producción normativa y en
+                asesoramiento en debates de control político.
+              </p>
+              <span class="flex gap-3 justify-center sm:justify-start">
+                <a
+                  href="#"
+                  title="facebook"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                    ></path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

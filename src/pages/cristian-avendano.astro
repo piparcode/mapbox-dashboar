@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from "astro:assets";
+import cristianAvendano from "../images/cristianAvendano.webp";
+---
+
+<Layout title="Quien soy - Cristian Avendaño">
+	<section class="text-white my-12">
+        <h1 class="text-center sm:text-4xl text-3xl mb-4 font-medium animate-fade-up animate-delay-300">Cristian Danilo Avendaño Fino</h1>
+        <div class="mx-auto flex items-center justify-evenly mt-12 gap-4 flex-col sm:flex-row">
+            <Image
+                src={cristianAvendano}
+                alt="Cristian Avendaño"
+                class="md:w-3/6 w-5/6 max-w-sm md:mb-4 object-center object-cover rounded-lg shadow-2xl shadow-[#D3D62F]/15 animate-fade-up animate-delay-500"
+            />
+            <div class="w-full max-w-2xl">
+                <p class="leading-relaxed px-4 text-pretty text-lg text-justify font-public mb-6 animate-fade-right animate-delay-500"><span class="font-bold">Cristian Avendaño</span>, un físico de 29 años formado en la Universidad Industrial de Santander, ha dedicado su vida a la defensa de causas como la conservación del medio ambiente, la lucha contra la corrupción y la promoción de la participación ciudadana. Trabajó como coordinador y analista de datos en el Concejo de Bucaramanga, donde impulsó cambios en las Corporaciones Autónomas Regionales y abogó por la implementación de los acuerdos de paz con las FARC-EP.
+                </p>
+
+                <p class="leading-relaxed px-4 text-pretty text-lg text-justify font-public animate-fade-right animate-delay-1000">
+                    En 2021, decidió postularse para la Cámara de Representantes por el Partido Alianza Verde, logrando la victoria con 35.001 votos. Ahora, como Representante para el periodo 2022-2026, sigue defendiendo sus causas en la Comisión Quinta Constitucional Permanente y en varias Comisiones Accidentales, incluyendo las de Paz, Bosques y Cambio Climático, Agua y Biodiversidad, Cultura, Política Minera y Seguimiento a los Recursos Invertidos a través del OCAD – Paz.
+                </p>
+
+                <span class="flex gap-3 px-4 justify-center sm:justify-start animate-fade-right animate-delay-1000 mt-4">
+                    <a
+                      href="#"
+                      title="facebook"
+                      class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                    >
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      title="twitter"
+                      class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                    >
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      title="whatsapp"
+                      class="transition-transform hover:scale-110 hover:text-[#D3D62F]"
+                    >
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-5 h-5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </span>
+            </div>
+            
+        </div>
+      </section>
+</Layout>

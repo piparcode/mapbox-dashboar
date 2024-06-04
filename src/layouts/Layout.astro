@@ -1,0 +1,53 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import NavBar from "../components/NavBar.astro";
+import BtnWhatsapp from "../components/BtnWhatsapp.astro";
+---
+
+<!doctype html>
+<html lang="es" class="overflow-x-hidden">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href='https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css' rel='stylesheet' />
+		<title>{title}</title>
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-[#091920] font-poetsen bg-fondo-svg bg-cover overflow-x-hidden">
+		<main class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+			<NavBar />
+			<BtnWhatsapp />
+			<slot />
+		</main>
+	</body>
+</html>
+
+<style is:global>
+	button:disabled, button[disabled],
+	button:disabled:hover, button[disabled]:hover {
+		border: 1px solid #999999;
+		background-color: #cfcfcf;
+		color: #666666;
+	}
+
+	button.btnLike:disabled svg, 
+	button.btnDislike:disabled svg,
+	button.btnComment:disabled svg,
+	button[disabled].btnlike svg,
+	button[disabled].btnComment svg,
+	button[disabled].btnDislike svg {
+		color: #e77b7b;
+		fill: #e77b7b;
+	}
+
+</style>

@@ -1,0 +1,150 @@
+---
+const menuitems = [
+  {
+    title: "Conoce a Cristian",
+    path: "#",
+    children: [
+      { title: "¿Quién es Cristian?", path: "/cristian-avendano" },
+      { title: "Nuestro Equipo", path: "/nuestro-equipo" }
+    ]
+  },
+  {
+    title: "¿Qué estamos haciendo?",
+    path: "#",
+    children: [
+      { title: "Proyectos de Ley", path: "/proyectos-ley" },
+      { title: "xd", path: "/#" }
+    ]
+  },
+  {
+    title: "Transparencia",
+    path: "#",
+    children: [
+      { title: "El Plan de Santander", path: "/#" },
+      { title: "Cristian Rinde Cuentas", path: "/#" }
+    ]
+  },
+  {
+    title: "Otras Iniciativas",
+    path: "#",
+    children: [
+      { title: "Del Capitolio al Terreno", path: "/#" },
+      { title: "Democratizando", path: "/#" },
+      { title: "Manual de Identidad Visual", path: "/#" }
+    ]
+  },
+  {
+    title: "Prensa",
+    path: "#",
+    children: [
+      { title: "Cristian en medios", path: "/#" },
+      { title: "Archivos Multimedia", path: "/#" },
+      { title: "Comunicados", path: "/#" }
+    ]
+  },
+];
+---
+
+
+<header
+  class="py-5 my-4 rounded-xl px-6 xl:px-10 flex items-center relative top-0 left-0 w-full justify-between xl:justify-center z-40 bg-[#113444] shadow-2xl text-white"
+>
+  <ul class="text-xl text-center rounded-xl transition-colors duration-500 [&>li>a]:inline-block xl:[&>li>a]:px-4 [&>li>a]:py-2 list-none hover:bg-[#b1b341]">
+	<li><a href="/" >Cristian Avendaño</a></li>
+  </ul>
+
+  <nav id="navbarCollapse" class="absolute bg-[#113444] xl:bg-transparent right-0 top-full mt-2 hidden w-full max-w-[250px] rounded-lg py-5 shadow-lg xl:static xl:block xl:min-w-fit xl:py-0 xl:px-4 xl:shadow-none 2xl:px-6">
+    <ul
+      class="block xl:flex 2xl:ml-20 items-center text-xl [&>li>a]:px-4 [&>li>a]:py-2 "
+    >
+    {
+      menuitems.map((item) => {
+        if(!item.children) {
+          return (
+            <li class="group relative hover:bg-[#b1b341] rounded-xl transition-colors duration-500">
+              <a
+                href={item.path}
+                class="inline-block">
+                {item.title}
+              </a>
+            </li>
+
+          )
+        }
+      
+        if(item.children) {
+          return (
+            <li class="submenu-item group relative hover:bg-[#b1b341] rounded-xl transition-colors duration-500">
+              <a
+                href={item.path}
+                class="flex gap-2 items-center justify-between">
+                {item.title}
+
+                <svg class="fill-current ml-2" width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" 
+                  />
+                </svg>
+              </a>
+
+              <div
+                class="submenu bg-[#113444] relative top-full left-0 hidden w-[250px] rounded-xl shadow-2xl p-4 transition-[top] duration-300 group-hover:opacity-100 xl:invisible xl:absolute xl:top-full xl:block xl:opacity-0 xl:shadow-lg xl:group-hover:visible xl:group-hover:top-full"
+              >
+                {
+                  item.children.map(item => (
+                    <a
+                      href={item.path}
+                      class="block rounded py-[10px] px-4 text-lg hover:text-[#D4D62E]"
+                    >
+                      {item.title}
+                    </a>
+                  ))
+                }
+              </div>
+            </li>
+          )
+        }
+      })
+    }
+    </ul>
+  </nav>
+
+  <button type="button" title="menu" id="navbarToggler" class="sticky top-1/2 block rounded-lg py-[6px] xl:hidden">
+    <span class="relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white"></span>
+    <span class="relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white"></span>
+    <span class="relative my-[6px] block h-[2px] w-[30px] bg-dark dark:bg-white"></span>
+  </button>
+
+</header>
+
+
+<script>
+
+  // ===== responsive navbar
+  let navbarToggler = document.querySelector('#navbarToggler');
+  const navbarCollapse = document.querySelector('#navbarCollapse');
+
+  navbarToggler.addEventListener('click', () => {
+    navbarToggler.classList.toggle('navbarTogglerActive');
+    navbarCollapse.classList.toggle('hidden');
+  });
+
+  //===== close navbar-collapse when a  clicked
+  document.querySelectorAll('#navbarCollapse ul li:not(.submenu-item) a').forEach((e) =>
+    e.addEventListener('click', () => {
+      navbarToggler.classList.remove('navbarTogglerActive');
+      navbarCollapse.classList.add('hidden');
+    })
+  );
+
+  // ===== Sub-menu
+  const submenuItems = document.querySelectorAll('.submenu-item');
+  submenuItems.forEach((el) => {
+    el.querySelector('a').addEventListener('click', () => {
+      el.querySelector('.submenu').classList.toggle('hidden');
+    });
+  });
+
+</script>
+
+
