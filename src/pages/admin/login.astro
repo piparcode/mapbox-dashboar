@@ -1,0 +1,30 @@
+---
+import AuthUser from "../../components/admin/Login.jsx"
+if (Astro.cookies.has("adminUser")) {
+  return Astro.redirect("/admin")
+}
+---
+
+<!doctype html>
+<html lang="es" class="overflow-x-hidden">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>Login</title>
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-[#091920] font-poetsen bg-fondo-svg bg-cover overflow-x-hidden">
+		<main class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 h-screen flex justify-center items-center">
+			<section class="bg-[#113444] text-white p-6 rounded-lg text-center shadow-2xl shadow-[#D3D62F]/10 animate-fade-up animate-delay-500">
+				<h1 class="text-3xl">Iniciar Sesión</h1>
+				<AuthUser client:load />
+			</section>
+		</main>
+	</body>
+</html>

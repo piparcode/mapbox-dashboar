@@ -3,9 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import CardProyectLey from "../components/CardProyectLey.jsx"
 
 const response = await fetch(
-  "https://cristian-avendano-app.onrender.com/api/proyectos-leys?fields[0]=title&fields[1]=description&fields[2]=status&fields[3]=statusDescription&fields[4]=link_ley&fields[5]=ley&populate[image][fields][0]=url"
+  "https://cristian-avendano.onrender.com/api/proyectos-leys?fields[0]=title&fields[1]=description&fields[2]=status&fields[3]=statusDescription&fields[4]=link_ley&fields[5]=ley&populate[image][fields][0]=url"
 );
 const result = await response.json();
+
 ---
 
 <Layout title="Proyectos de ley - Cristian Avendaño">

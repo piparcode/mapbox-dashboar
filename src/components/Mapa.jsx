@@ -7,28 +7,35 @@ function Map() {
 
   useEffect(() => {
     const apiUrl =
-      "https://cristian-avendano-app.onrender.com/api/mapas?populate[image][fields][0]=url";
+      "https://cristian-avendano.onrender.com/api/mapas?populate[image][fields][0]=url";
 
     fetch(apiUrl)
       .then((response) => response.json())
       .then((result) => {
         result.data.forEach((item) => {
           let linksHtml = "";
-          item.attributes.links.data.forEach((link) => {
+          item.attributes.links.forEach((link) => {
             linksHtml += `
-                    <a href="${link.url}" target="_blank" >${link.name}</a>
-                `;
+              <a class="text-white border rounded-lg py-2 px-4 w-fit border-gray-200 hover:text-[#ecf387] hover:border-[#ecf387]" href="${link.url}" target="_blank" >${link.red}</a>
+            `;
           });
-          new mapboxgl.Marker({ color: "#D4D62E" })
+          new mapboxgl.Marker({ color: "#113444" })
             .setLngLat([item.attributes.long, item.attributes.lat])
             .setPopup(
               new mapboxgl.Popup({ offset: 25 }).setHTML(`
                 <div class="py-4 px-2 rounded-lg w-fit flex flex-col gap-4">
-                    <h2 class="lg:text-xl font-semibold text-center capitalize">${item.attributes.title}</h2>
-                    <p class="text-sm lg:text-md text-pretty max-w-xs text-justify line-clamp-2">${item.attributes.description}</p>
-                    <div>
-                        <img class="w-full h-full max-w-xs object-cover block rounded-xl mx-auto" src="${item.attributes.image.data.attributes.url}" alt=${item.attributes.title}>	
+                    <h2 class="lg:text-xl font-semibold text-center capitalize">${item.attributes.title} <span class="text-gray-200">(${item.attributes.city})</span></h2>
+                    <a href="http://localhost:4321/blog/${item.attributes.slug}">
+                      <img class="w-full h-full max-w-60 object-cover block rounded-xl mx-auto" src="${item.attributes.image.data[0].attributes.url}" alt=${item.attributes.title}>	
+                    </a>
+                    <div class="mb-4">
+                      <p class="text-sm lg:text-md text-pretty max-w-xs text-justify line-clamp-3">
+                        ${item.attributes.description}
+                      </p>
+                      <span class="font-bold"><a href="http://localhost:4321/blog/${item.attributes.slug}">ver más</a></span>
                     </div>
+                  
+                    <div>${linksHtml}</div>
                 </div>
             `)
             )
@@ -44,14 +51,14 @@ function Map() {
     const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/streets-v12",
-      center: [-73.1198, 7.12539],
-      zoom: 13,
-      pitch: 60,
+      zoom: 1,
       maxBounds: [
-        [-73.15, 7.1],
-        [-73.08, 7.15],
+        [-73.5, 6.2],
+        [-72.5, 7.5],
       ],
     });
+
+    
 
     return () => map.remove();
   }, []);

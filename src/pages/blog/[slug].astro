@@ -1,0 +1,38 @@
+---
+import fetchApi from '../../lib/strapi';
+import type Mapa from '../../interfaces/mapa';
+
+const { slug } = Astro.params;
+
+let mapa: Mapa;
+
+try {
+    mapa = await fetchApi<Mapa>({
+    endpoint: 'mapas?populate[image][fields][0]=url',
+    wrappedByKey: 'data',
+    wrappedByList: true,
+    query: {
+      'filters[slug][$eq]': slug || '',
+    },
+  });
+} catch (error) {
+  return Astro.redirect('/404');
+}
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>{mapa.attributes.title}</title>
+  </head>
+
+  <body>
+    <main>
+      <img src={mapa.attributes.image.data[0].attributes.url} />
+      <h1>{mapa.attributes.title}</h1>
+
+      <!-- Renderizar texto plano -->
+      <!-- <p>{article.attributes.content}</p> -->
+    </main>
+  </body>
+</html>
