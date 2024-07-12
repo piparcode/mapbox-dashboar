@@ -1,0 +1,12 @@
+---
+import Layout from '../../layouts/Dashboard.astro';
+import FormMap from "../../components/admin/FormMap.jsx"
+
+if (!Astro.cookies.has("adminUser")) {
+  return Astro.redirect("/admin/login")
+}
+---
+
+<Layout title="Administración">
+  <FormMap client:load />
+</Layout>
